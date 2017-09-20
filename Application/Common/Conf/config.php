@@ -9,4 +9,5 @@ return array(
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'p39_',    // 数据库表前缀
     'DB_CHARSET'            =>  'utf8',      // 数据库编码默认采用utf8
+    'DEFAULT_FILTER'        =>  'trim,htmlspecialchars', // 默认参数过滤方法 用于I函数...
 );
