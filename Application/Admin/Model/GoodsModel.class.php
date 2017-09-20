@@ -17,4 +17,13 @@ class GoodsModel extends Model{
         array('market_price','currency','市场价格必须是货币类型！',1),
         array('shop_price','currency','本店价格必须是货币类型！',1),
     );
+
+    //这个方法在插入之前会被调用
+    //$data要插入表中的数据
+    protected function _before_insert(&$data, $options)
+    {
+        $data['addtime'] = date('Y-m-d H:i:s',time());
+        //用自定义的过滤函数来有选择的过滤
+        $data['goods_desc'] = removeXSS($_POST['goods_desc']);
+    }
 }

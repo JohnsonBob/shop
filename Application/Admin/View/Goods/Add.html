@@ -53,7 +53,7 @@
                 <tr>
                     <td class="label">商品描述：</td>
                     <td>
-                        <textarea name="goods_desc" cols="40" rows="3"></textarea>
+                        <textarea id="goods_desc" name="goods_desc"></textarea>
                     </td>
                 </tr>
             </table>
@@ -70,3 +70,17 @@
 版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
 </body>
 </html>
+
+<!--导入在线编辑器-->
+<link href="__PUBLIC__/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="__PUBLIC__/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/umeditor/third-party/template.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/umeditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+    UM.getEditor('goods_desc',{
+        initialFrameWidth:'100%',//初始化编辑器宽度,默认500
+        initialFrameHeight:350  //初始化编辑器高度,默认500
+    });
+</script>
